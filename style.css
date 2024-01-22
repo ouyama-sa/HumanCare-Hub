@@ -168,17 +168,51 @@ main .text {
 
 footer {
   height: 6rem;
+  
   background: var(--secondary);
+  
   display: flex;
   flex-direction: row;
 }
 
 footer a {
   color: #ffffffad;
-
-  gap: 2rem;
+  font-size: 1.3rem;
+  
+  gap: 1.2rem;
   display: flex;
   align-items: center;
+  
   text-decoration: none;
+  
   margin: auto;
+
+
+}
+
+footer a {
+  -webkit-animation: color-change-2x 1s ease-in-out infinite alternate both;
+	animation: color-change-2x 1s ease-in-out infinite alternate both;
+}
+
+@-webkit-keyframes color-change-2x {
+  0% {
+    color: #f56363;
+  }
+  100% {
+    color: #0bd64f;
+  }
+}
+
+@keyframes color-change-2x {
+  0% {
+    color: #19dcea;
+  }
+  50% {
+    color: #fd5d5d;
+  }
+  100% {
+    filter: hue-rotate(10);
+    color: #ff8b55;
+  }
 }
