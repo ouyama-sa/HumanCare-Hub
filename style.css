@@ -81,15 +81,29 @@ main .text {
 }
 
 main .article img {
-  width: 100vw;
+  width: 100%;
   object-fit: cover;
+
+  border-radius: .5rem;
+}
+
+main .title {
+  display: flex;
+
+  align-items: normal;
+
+  padding-bottom: 3rem;
+
+  margin-top: 1rem;
+  gap: 3rem;
 }
 
 main .title h1 {
   color: var(--gray-title);
   font-size: 2.4rem;
   font-weight: 700;
-  line-height: 160%;
+  line-height: 130%;
+  margin-bottom: 1rem;
 }
 
 main .title p {
@@ -97,10 +111,11 @@ main .title p {
 }
 
 .button-wrapper {
-  margin-top: 8px;
-  margin-bottom: 3.1rem;
+  /* margin-top: 1rem; */
+  margin-bottom: 1rem;
   display: flex;
-  gap: 1.2rem;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .button-wrapper 
@@ -124,7 +139,12 @@ button:hover {
 main .text {
   font-size: 1.6rem;
   font-weight: var(--fw-body);
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  text-align: justify;
 }
+
 
 .related h2 {
   margin: 3.2rem 0;
@@ -148,6 +168,8 @@ main .text {
   background-color: #387e9610;
   padding: 1rem;
   border-radius: .5rem;
+
+  transition: 200ms ease;
 }
 
 .card img {
@@ -156,6 +178,14 @@ main .text {
   max-width: 15rem;
   width: 100%;
   height: 84px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card:hover img {
+  filter: saturate(1.25);
 }
 
 .card-content {
@@ -187,10 +217,10 @@ footer a {
   
   margin: auto;
 
-
+  transition: 200ms ease-in-out;
 }
 
-footer a {
+footer a:hover {
   -webkit-animation: color-change-2x 1s ease-in-out infinite alternate both;
 	animation: color-change-2x 1s ease-in-out infinite alternate both;
 }
@@ -214,5 +244,60 @@ footer a {
   100% {
     filter: hue-rotate(10);
     color: #ff8b55;
+  }
+}
+
+@media(min-width:700px) {
+  
+  header {
+    padding: 1.2rem clamp(2rem, -3.714rem + 15.238vw, 10rem);
+  }
+  
+  main {
+    display: flex;
+    justify-content: space-between;
+    padding: 4.4rem clamp(2rem, -3.714rem + 15.238vw, 10rem);
+  }
+
+  main .article, .article img {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+
+    margin-right: 5rem;
+  }
+
+  main .article .title {
+    padding: 0;
+    margin: 3.1rem 0;
+    justify-content: space-between;
+  }
+
+  main .article .button-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 1.2rem;
+  }
+
+  main .article .text {
+    padding: 0;
+    margin: 0;
+  }
+
+  main .related {
+    margin: 0;
+    padding: 0;
+  }
+
+  main .related h2 {
+    font-size: 2.4rem;
+
+    margin: 0 0 2rem 3.2rem;
+  }
+
+  .related .gallery {
+    max-width: 38.2rem;
+    margin: 0;
+    padding: 0;
   }
 }
