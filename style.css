@@ -216,8 +216,6 @@ footer a {
   text-decoration: none;
   
   margin: auto;
-
-  transition: 200ms ease-in-out;
 }
 
 footer a:hover {
@@ -227,7 +225,7 @@ footer a:hover {
 
 @-webkit-keyframes color-change-2x {
   0% {
-    color: #f56363;
+    color: #ec8484;
   }
   100% {
     color: #0bd64f;
@@ -239,11 +237,11 @@ footer a:hover {
     color: #19dcea;
   }
   50% {
-    color: #fd5d5d;
+    color: #fa8989;
   }
   100% {
     filter: hue-rotate(10);
-    color: #ff8b55;
+    color: #75ff62;
   }
 }
 
