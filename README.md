@@ -1,5 +1,8 @@
 # HumanCare Hub
 
+![image](https://github.com/user-attachments/assets/5fe3a02a-b129-4b9b-a291-15dd0f76fd75)
+
+
 ## Overview
 
 This repository contains the code for a website named **HumanCare Hub**. The website explores the mystical connection between cats and humans, delving into the possibility of humans perceiving the auras of their feline companions. The project showcases the use of grids, semantic HTML tags, mobile responsiveness, and subtle animations.
